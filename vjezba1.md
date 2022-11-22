@@ -44,8 +44,9 @@ zupanije kojima je povrsina veca do 20000 kvadratnih kilometara i manja od 10000
 SELECT naziv,povrsina,brstanovnika FROM zupanija WHERE povrsina > 20000 AND brstanovnika < 200000;
 ```
 Vracena nam je tablica:
-
+```
 naziv    |povrsina |brstanovnika|
 ---------+---------+------------+
 Jamajica | 23987.34|      187000|
 Zelenland|134987.00|       34000|
+```
