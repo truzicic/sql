@@ -50,3 +50,19 @@ naziv    |povrsina |brstanovnika|
 Jamajica | 23987.34|      187000|
 Zelenland|134987.00|       34000|
 ```
+Ovakve tablice mozemo direktno kopirati u md file, ali ih moramo tretirati kao kod,
+znaci omedjiti trostrukim backtick znakovima.
+
+Ako zelimo primjerice ispisati zupanije s povrsinom manjom od 25000 kvadrata i brojem stanovnika
+vecim od 1000000:
+```
+SELECT naziv,povrsina,brstanovnika FROM zupanija WHERE povrsina < 25000 OR brstanovnika > 1000000;
+```
+Vracena nam je tablica:
+```
+naziv           |povrsina  |brstanovnika|
+----------------+----------+------------+
+Oslaka          |  23456.45|      234000|
+Jamajica        |  23987.34|      187000|
+Babua Nova Korea|1287435.45|     1234000|
+```
