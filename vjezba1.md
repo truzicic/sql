@@ -22,6 +22,7 @@ SELECT naziv FROM opcina WHERE zupanija = 1;
 I jos jedan primjer:
 ```
 SELECT * FROM mjesto WHERE opcina = 5;
+```
 
 Naravno, mozemo koristiti i druge znakove osim za usporedbu osim =.
 <, >, <=, >=, i <>. Pa da vidimo:
