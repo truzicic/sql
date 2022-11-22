@@ -77,7 +77,7 @@ Oslaka          |  23456.45|      234000|
 Jamajica        |  23987.34|      187000|
 Babua Nova Korea|1287435.45|     1234000|
 ```
-Uvjeta moze biti i vise kada koristimo WHERE,AND i OR, ne samo dva kao u prethodnom primjeru.
+Uvjeta moze biti i vise kada koristimo WHERE, AND i OR, ne samo dva kao u prethodnom primjeru.
 Prethodnu pretragu cemo prosiriti tako da nam izlista i zupanije s manje od 50000 stanovnika.
 ```
 SELECT naziv,povrsina,brstanovnika FROM zupanija WHERE povrsina < 25000 OR brstanovnika > 1000000
@@ -91,4 +91,20 @@ Oslaka          |  23456.45|      234000|
 Jamajica        |  23987.34|      187000|
 Zelenland       | 134987.00|       34000|
 Babua Nova Korea|1287435.45|     1234000|
+```
+Jedna zanimljiva mogucnost prilikom pretrazivanja tablica je i mogucnost
+kombiniranja proizvoljnih stringova s rezultatom pretrage. Primjer:
+```
+SELECT CONCAT(naziv,' ima povrsinu od ',povrsina,' kvadratnih kilometara.') AS POVRSINA
+	FROM zupanija
+```
+Rezultat je:
+```
+POVRSINA                                                          
+------------------------------------------------------------------
+Oslaka ima povrsinu od 23456.45 kvadratnih kilometara.            
+Jamajica ima povrsinu od 23987.34 kvadratnih kilometara.          
+Zelenland ima povrsinu od 134987.00 kvadratnih kilometara.        
+Babua Nova Korea ima povrsinu od 1287435.45 kvadratnih kilometara.
+Pogbala Crnovlasi ima povrsinu od 856324.23 kvadratnih kilometara.
 ```
